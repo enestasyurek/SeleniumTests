@@ -6,7 +6,7 @@ import tests.Utilities.WebDriverFactory;
 public class Test {
     public static void main(String[] args) {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
-        driver.get("http://www.google.com");
+        driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
 
     }
