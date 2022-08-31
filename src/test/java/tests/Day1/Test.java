@@ -8,6 +8,6 @@ public class Test {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
-
+        //update the code to use the WebDriverFactory class
     }
 }
