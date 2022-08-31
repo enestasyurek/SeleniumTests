@@ -8,22 +8,20 @@ import org.openqa.selenium.firefox.*;
 public class WebDriverFactory {
 
     public static WebDriver getDriver(String browserType){
+        if (browserType != null){
+            if (browserType.equalsIgnoreCase("chrome")){
 
-        if (browserType.equalsIgnoreCase("chrome")){
+                WebDriverManager.chromedriver().setup();
+                return new ChromeDriver();
 
-            WebDriverManager.chromedriver().setup();
-            return new ChromeDriver();
+            }else if (browserType.equalsIgnoreCase("firefox")){
+                WebDriverManager.firefoxdriver().setup();
+                return new FirefoxDriver();
+            }
 
-        }else if (browserType.equalsIgnoreCase("firefox")){
-            WebDriverManager.firefoxdriver().setup();
-            return new FirefoxDriver();
-        }else{
-            System.out.println("Given browser type does not exist/or is not currently supported");
-            System.out.println("Driver = null");
-            return null;
         }
 
-
+        return null;
     }
 
 }
