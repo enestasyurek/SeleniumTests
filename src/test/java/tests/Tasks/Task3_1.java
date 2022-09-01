@@ -24,6 +24,10 @@ public class Task3_1 {
         WebElement loginButton = driver.findElement(By.className("login-btn"));
         loginButton.click();
 
+        
+
+        driver.findElements(By.tagName("a"));
+
         String actualErrorText = driver.findElement(By.className("errortext")).getText();
         String expectedErrorText = "Incorrect login or password";
         //System.out.println(actualErrorText);
