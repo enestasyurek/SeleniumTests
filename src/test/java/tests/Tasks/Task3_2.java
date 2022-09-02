@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Task3_2 {
 
     public static void main(String[] args) {
@@ -13,6 +15,7 @@ public class Task3_2 {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("https://login1.nextbasecrm.com/");
         String labelText = driver.findElement(By.className("login-item-checkbox-label")).getText();
@@ -42,6 +45,11 @@ public class Task3_2 {
         System.out.println("forgotPassText = " + forgotPassText);
         System.out.println("labelText = " + labelText);
 
+
+        /*
+        StaleElementReferenceException
+        driver.navigate().refresh();
+        System.out.println(forgotPass.getText());*/
 
 
     }

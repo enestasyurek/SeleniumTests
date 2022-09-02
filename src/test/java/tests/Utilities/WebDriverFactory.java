@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.firefox.*;
 
 public class WebDriverFactory {
-
     public static WebDriver getDriver(String browserType){
         if (browserType != null){
             if (browserType.equalsIgnoreCase("chrome")){
@@ -23,5 +22,6 @@ public class WebDriverFactory {
 
         return null;
     }
+
 
 }
