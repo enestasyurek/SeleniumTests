@@ -20,6 +20,7 @@ public class Task5_3 {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         uti.findBtn(driver, "sport", "basketball");
+        uti.findBtn(driver, "sport", "hokey");
         //C #3: Utility method task for (continuation of Task2)
         //1. Open Chrome browser
         //2. Go to https://practice.cydeo.com/radio_buttons
@@ -30,7 +31,7 @@ public class Task5_3 {
 
 class uti{
     public static void findBtn(WebDriver driver,String attName, String attId){
-        List<WebElement> listOfRadio = driver.findElements(By.name("sport"));
+        List<WebElement> listOfRadio = driver.findElements(By.name(attName));
 
         for (WebElement radio : listOfRadio) {
             String Id = radio.getAttribute("id");
@@ -41,6 +42,8 @@ class uti{
             }
         }
     }
+
+
 }
 //Create a utility method to handle above logic.
 //Method name: clickAndVerifyRadioButton
