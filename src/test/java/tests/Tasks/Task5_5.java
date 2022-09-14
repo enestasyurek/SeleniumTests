@@ -20,6 +20,7 @@ public class Task5_5 {
     //2. Go to http://practice.cybertekschool.com/dropdown
     @BeforeMethod
     public void setUp(){
+
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
