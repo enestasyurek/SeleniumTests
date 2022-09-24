@@ -49,6 +49,7 @@ public class BrowserUtils {
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
         driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
         driver.findElement(By.id("ctl00_MainContent_login_button")).click();
+
     }
 
     public static void login_crm(WebDriver driver,String username, String password){
