@@ -33,4 +33,9 @@ public class a101_prep {
         WebElement giyim = driver.findElement(By.xpath("//a[.='Dizaltı Çorap']"));
         giyim.click();
     }
+
+    @tearDown
+    public void tearDown(){
+        driver.close();
+    }
 }
